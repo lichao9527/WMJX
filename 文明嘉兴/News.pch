@@ -1,0 +1,22 @@
+//
+//  News.pch
+//  文明嘉兴
+//
+//  Created by dc003 on 16/6/6.
+//  Copyright © 2016年 dc003. All rights reserved.
+//
+
+#ifndef News_pch
+#define News_pch
+#import "TableViewCell.h"
+#import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
+#import "SDCycleScrollView.h"
+#define HOST @"http://jxwm.gkmm.net:8989/news/"
+#define HTTP_news [HOST stringByAppendingString:@"news/getNewsByCategoryId.do"]
+#define HTTP_banner [HOST stringByAppendingString:@"newsCategory/getBanner.do"]
+#import "MJRefresh.h"
+#import "News.h"
+#import "MJExtension.h"
+
+#endif /* News_pch */
