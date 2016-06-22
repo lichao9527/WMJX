@@ -105,9 +105,9 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"sa");
-//    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    UIViewController *one=[story instantiateViewControllerWithIdentifier:@"oneViewController"];
-    [self performSegueWithIdentifier:@"oneViewController" sender:self];
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *one=[story instantiateViewControllerWithIdentifier:@"NewsDetailViewController"];
+    [self presentViewController:one animated:YES completion:nil];
     
 //    [self.navigationController addChildViewController:oneViewController];
 //    [self.navigationController pushViewController:one animated:YES];

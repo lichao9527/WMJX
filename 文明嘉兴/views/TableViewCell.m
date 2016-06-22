@@ -15,7 +15,7 @@
         NSArray *arr=[[NSBundle mainBundle]loadNibNamed:@"TableViewCell" owner:self options:nil];
         self=arr[0];
     }
-    self.newsImage.layer.cornerRadius=37;
+    self.newsImage.layer.cornerRadius=10;
     self.newsImage.layer.masksToBounds=YES;
     return self;
 }

@@ -61,13 +61,18 @@
             [btn setBackgroundColor:[UIColor clearColor]];
             [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
             [btn setTag:i];
-            [_btnBgView addSubview:btn];
+            [self addSubview:btn];
         }
 
         
-        _showContentLabelView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ItemWidth, ItemHeight)];
+        _showContentLabelView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ItemWidth, ItemHeight+10)];
         [_showContentLabelView setClipsToBounds:YES];
         [_normalBgView addSubview:_showContentLabelView];
+        //红线
+        UIView *vi=[[UIView alloc]initWithFrame:CGRectMake(0, ItemHeight, SCREENW, 1)];
+        vi.backgroundColor=[UIColor redColor];
+        [self addSubview:vi];
+        
         
         _selectedBgView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREENW, headerHeight)];
         [_selectedBgView setUserInteractionEnabled:NO];
@@ -75,7 +80,7 @@
         [_showContentLabelView addSubview:_selectedBgView];
         [self createLabelWith:LabelSelectedColor andTitle:titleArray addToView:_selectedBgView];
         
-        _scrollViewMain = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_normalBgView.frame), SCREENW, SCREENH - CGRectGetMaxY(_normalBgView.frame))];
+        _scrollViewMain = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_normalBgView.frame)+10, SCREENW, SCREENH - CGRectGetMaxY(_normalBgView.frame))];
         [_scrollViewMain setBackgroundColor:[UIColor clearColor]];
         _scrollViewMain.contentSize = CGSizeMake(SCREENW * [titleArray count], CGRectGetHeight(_scrollViewMain.frame));
         _scrollViewMain.pagingEnabled = YES;

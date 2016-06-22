@@ -345,6 +345,8 @@
 			children = (
 				F712DA331D07C68D005BC07C /* NewsViewController.h */,
 				F712DA341D07C68D005BC07C /* NewsViewController.m */,
+				F79EF6721D10EFE2000B7B08 /* NewsDetailViewController.h */,
+				F79EF6731D10EFE2000B7B08 /* NewsDetailViewController.m */,
 				F7CE80C41D101C8900CCC41C /* ViewController.h */,
 				F7CE80C51D101C8900CCC41C /* ViewController.m */,
 			);
@@ -354,8 +356,6 @@
 		F712D9681D07B909005BC07C /* views */ = {
 			isa = PBXGroup;
 			children = (
-				F79EF6721D10EFE2000B7B08 /* NewsDetailViewController.h */,
-				F79EF6731D10EFE2000B7B08 /* NewsDetailViewController.m */,
 				F712DA2C1D07C672005BC07C /* TableViewCell.h */,
 				F712DA2D1D07C672005BC07C /* TableViewCell.m */,
 				F712DA2E1D07C672005BC07C /* TableViewCell.xib */,
