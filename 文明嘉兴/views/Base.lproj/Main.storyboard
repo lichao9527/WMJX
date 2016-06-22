@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GW9-9f-dci">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="zP1-f1-fug"/>
@@ -109,7 +109,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GW9-9f-dci" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Lh-GJ-ijN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GW9-9f-dci" secondAttribute="bottom" id="NBl-TB-o0d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GW9-9f-dci" secondAttribute="bottom" constant="50" id="NBl-TB-o0d"/>
                             <constraint firstAttribute="trailing" secondItem="GW9-9f-dci" secondAttribute="trailing" id="NK0-a6-aWU"/>
                             <constraint firstItem="GW9-9f-dci" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bIa-ct-3dR"/>
                         </constraints>
