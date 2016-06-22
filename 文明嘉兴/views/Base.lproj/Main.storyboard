@@ -128,7 +128,7 @@
         <!--微文明-->
         <scene sceneID="onO-a3-dLZ">
             <objects>
-                <viewController id="gjq-co-CEz" sceneMemberID="viewController">
+                <viewController id="gjq-co-CEz" customClass="BlogViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SfF-Sb-CNa"/>
                         <viewControllerLayoutGuide type="bottom" id="X4j-4e-SoB"/>
