@@ -7,10 +7,11 @@
 //
 
 
-#import "MBProgressHUD.h"
+
 #import "NewsViewController.h"
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate,MBProgressHUDDelegate>{
     int num;
+    int cateid;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *newsArr;
@@ -19,7 +20,7 @@
 @property(nonatomic,strong)SDCycleScrollView *scrollView;
 @property(nonatomic,strong)UIView *tableHeaderView;
 @property(nonatomic,strong)MBProgressHUD *hub;
-
+@property(nonatomic,assign)NSInteger a;
 @end
 
 @implementation NewsViewController
@@ -28,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _hub=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    _hub.label.text=@"数据加载中...";
+    _hub.labelText=@"数据加载中...";
     [self.tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"Cell"];
     NSNotificationCenter *center=[NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(getDatabyNews:) name:@"notification" object:nil];
@@ -45,7 +46,7 @@
     }];
 }
 -(void)getDatabyNews:(NSNotification *)notification{
-    [self.hub hideAnimated:YES];
+    [self.hub hide:YES];
     if (num==1) {
         self.newsArr=[NSMutableArray array];
     }
@@ -105,11 +106,11 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"sa");
-    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *one=[story instantiateViewControllerWithIdentifier:@"NewsDetailViewController"];
-    [self presentViewController:one animated:YES completion:nil];
-    
-//    [self.navigationController addChildViewController:oneViewController];
-//    [self.navigationController pushViewController:one animated:YES];
+    self.a=indexPath.row;
+    [self performSegueWithIdentifier:@"NewsDetailViewController" sender:self];
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    id send=segue.destinationViewController;
+    [send setValue:@(self.a) forKey:@"num"];
 }
 @end

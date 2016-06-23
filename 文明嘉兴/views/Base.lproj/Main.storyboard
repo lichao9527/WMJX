@@ -17,8 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uw9-lH-EVD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="新闻详情" id="JmT-EY-40s">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="gyw-aw-HoI">
+                                            <connections>
+                                                <action selector="back:" destination="rke-sN-mBm" id="MZP-dS-09s"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邻里几个；牛逼不加班了加班；看病；来不离开你；看" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3z-8H-MzH">
-                                <rect key="frame" x="21" y="13" width="344" height="42"/>
+                                <rect key="frame" x="21" y="71" width="344" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="yI8-wc-Zdk"/>
                                 </constraints>
@@ -27,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxB-cH-rjg">
-                                <rect key="frame" x="7" y="13" width="6" height="42"/>
+                                <rect key="frame" x="7" y="71" width="6" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.054090280150000003" blue="0.084082204440000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="6" id="NAI-5g-Fyo"/>
@@ -35,14 +47,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRm-4P-YpD">
-                                <rect key="frame" x="0.0" y="84" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="142" width="375" height="1"/>
                                 <color key="backgroundColor" red="1" green="0.054090280150000003" blue="0.084082204440000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="6qB-my-Roc"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期：2015-15-20 15：51：00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEF-EQ-3zF">
-                                <rect key="frame" x="14" y="63" width="183" height="19"/>
+                                <rect key="frame" x="14" y="121" width="183" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="183" id="1dE-yZ-rUx"/>
                                     <constraint firstAttribute="height" constant="19" id="bPY-z2-J5i"/>
@@ -52,7 +64,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来源：某木某某" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laK-Kd-vIp">
-                                <rect key="frame" x="244" y="62" width="93" height="21"/>
+                                <rect key="frame" x="244" y="120" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="FaZ-iO-3JF"/>
                                     <constraint firstAttribute="width" constant="93" id="c15-Cx-WQl"/>
@@ -64,26 +76,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Y3z-8H-MzH" firstAttribute="top" secondItem="Zb1-mX-KbG" secondAttribute="top" constant="13" id="3O3-Ft-EE1"/>
+                            <constraint firstItem="Y3z-8H-MzH" firstAttribute="top" secondItem="Zb1-mX-KbG" secondAttribute="top" constant="71" id="3O3-Ft-EE1"/>
+                            <constraint firstItem="Uw9-lH-EVD" firstAttribute="leading" secondItem="Zb1-mX-KbG" secondAttribute="leading" id="3yY-TA-TWP"/>
                             <constraint firstItem="tEF-EQ-3zF" firstAttribute="top" secondItem="Y3z-8H-MzH" secondAttribute="bottom" constant="8" id="6gI-Od-Bhm"/>
                             <constraint firstItem="bRm-4P-YpD" firstAttribute="leading" secondItem="Zb1-mX-KbG" secondAttribute="leading" id="GSb-uD-0T8"/>
                             <constraint firstItem="laK-Kd-vIp" firstAttribute="top" secondItem="Y3z-8H-MzH" secondAttribute="bottom" constant="7" id="H2x-fR-hCZ"/>
                             <constraint firstItem="Y3z-8H-MzH" firstAttribute="leading" secondItem="wxB-cH-rjg" secondAttribute="trailing" constant="8" id="HTz-3c-C06"/>
                             <constraint firstItem="bRm-4P-YpD" firstAttribute="top" secondItem="laK-Kd-vIp" secondAttribute="bottom" constant="1" id="K0J-Eh-6pm"/>
-                            <constraint firstItem="wxB-cH-rjg" firstAttribute="top" secondItem="Zb1-mX-KbG" secondAttribute="top" constant="13" id="d8B-bg-grI"/>
+                            <constraint firstItem="Uw9-lH-EVD" firstAttribute="top" secondItem="axY-G2-7Sp" secondAttribute="bottom" id="atC-F8-boY"/>
+                            <constraint firstItem="wxB-cH-rjg" firstAttribute="top" secondItem="Zb1-mX-KbG" secondAttribute="top" constant="71" id="d8B-bg-grI"/>
                             <constraint firstItem="wxB-cH-rjg" firstAttribute="leading" secondItem="Zb1-mX-KbG" secondAttribute="leading" constant="7" id="iqs-lH-93N"/>
+                            <constraint firstAttribute="trailing" secondItem="Uw9-lH-EVD" secondAttribute="trailing" id="o36-7o-ECf"/>
                             <constraint firstAttribute="trailing" secondItem="Y3z-8H-MzH" secondAttribute="trailing" constant="10" id="tx5-TE-2ie"/>
                             <constraint firstItem="tEF-EQ-3zF" firstAttribute="leading" secondItem="Zb1-mX-KbG" secondAttribute="leading" constant="14" id="xqU-7B-m1Q"/>
                             <constraint firstAttribute="trailing" secondItem="laK-Kd-vIp" secondAttribute="trailing" constant="38" id="zA5-sO-XHO"/>
                             <constraint firstAttribute="trailing" secondItem="bRm-4P-YpD" secondAttribute="trailing" id="zMQ-d0-wyG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="K33-ZL-2jK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpN-6d-D7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2071.5" y="2270.5"/>
+            <point key="canvasLocation" x="-2071.5" y="2260.5"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -118,12 +133,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="GW9-9f-dci" id="qqs-Ad-lA7"/>
-                        <segue destination="rke-sN-mBm" kind="push" identifier="NewsDetailViewController" id="FyJ-am-7h5"/>
+                        <segue destination="rke-sN-mBm" kind="showDetail" identifier="NewsDetailViewController" id="vmk-i8-kZI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2071.5" y="1468.5"/>
+            <point key="canvasLocation" x="-2127.5" y="1460.5"/>
         </scene>
         <!--微文明-->
         <scene sceneID="onO-a3-dLZ">
@@ -177,14 +192,6 @@
                     <view key="view" contentMode="scaleToFill" id="RrF-ri-7Bz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdq-ph-Kim">
-                                <rect key="frame" x="201" y="253" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="文明办" image="文明办" id="3UF-9P-XEd"/>

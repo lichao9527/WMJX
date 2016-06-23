@@ -92,6 +92,7 @@
             UIStoryboard *stroy=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
             UIViewController *obj=[stroy instantiateViewControllerWithIdentifier:showControllerArray[i]];
             
+            
 //            Class someClass = NSClassFromString(showControllerArray[i]);
 //            UIViewController * obj = [[someClass alloc] init];
             [obj.view setFrame:CGRectMake(i * SCREENW, 0, SCREENW, CGRectGetHeight(_scrollViewMain.frame))];

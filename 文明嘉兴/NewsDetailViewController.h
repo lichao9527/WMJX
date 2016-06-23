@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsDetailViewController : UIViewController
-
+@property(nonatomic,assign)NSInteger num;
 @end

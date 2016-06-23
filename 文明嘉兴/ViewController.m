@@ -30,7 +30,7 @@
     [self.view addSubview:segmentView];
 }
 - (void)didSelectIndex:(NSInteger)index{
-//    NSLog(@"%ld",index);
+    NSLog(@"%ld",index);
 }
 
 @end

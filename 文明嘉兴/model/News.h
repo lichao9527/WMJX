@@ -10,7 +10,7 @@
 
 @interface News : NSObject
 @property(nonatomic,strong)NSString *imageurl;
-
+@property(nonatomic,strong)NSNumber * newsId;//在字典中看到id,全部替换
 @property(nonatomic,strong)NSString *title;
 @property(nonatomic,strong)NSString *image;
 @property(nonatomic,strong)NSString *source;

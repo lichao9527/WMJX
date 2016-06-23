@@ -16,10 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     UIWebView *webView=[[UIWebView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:webView];
     NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://weibo.com/u/2852517300?is_hot=1"]];
     [webView loadRequest:request];
+    MBProgressHUD *hub=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hub.labelText=@"数据加载中...";
+    [hub hide:YES afterDelay:3];
 }
 
 - (void)didReceiveMemoryWarning {

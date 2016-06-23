@@ -5,7 +5,7 @@
 //  Created by dc003 on 16/6/6.
 //  Copyright © 2016年 dc003. All rights reserved.
 //
-
+#import "MBProgressHUD.h"
 #ifndef News_pch
 #define News_pch
 #import "TableViewCell.h"
